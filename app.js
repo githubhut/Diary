@@ -98,7 +98,7 @@ app.get("/posts/:postName", async (req, res)=>{
 
     const distinctTitles = await Posts.find().distinct('title');
     distinctTitles.forEach(async (element) => {
-        if(element == requredTitle){
+        if(_.lowerCase(element) == _.lowerCase(requredTitle)){
             const p = await Posts.findOne({ title: element });
             res.render("post", {
                 title : element,
