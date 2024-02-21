@@ -33,7 +33,6 @@ const Posts = mongoose.model("Post", postSchema);
 
 
 app.get("/", async (req, res)=>{
-    location.reload();
     
     const pst = await Posts.find();
 
