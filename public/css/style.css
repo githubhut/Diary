@@ -1,31 +1,47 @@
 *{
     margin: 0;
     padding: 0;
+    
+}
+:root{
+    background-image: linear-gradient(to right,#BBD2C5, #536976);
+
 }
 body{
     margin-bottom: 30px;
-
+    background-repeat: no-repeat;
+    
 }
 .container{
     margin: 10px;
+}
+.home_container{
+    border-top: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px, 2fr));
+    gap: 10px;
+
+}
+.pst{
+    padding: 10px;
+    margin: 2px;
 }
 
 h1,h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: rebeccapurple; */
 }
 h2{
     margin: 5px;
 }
 h3{
-    color: 	#011efe;
+    color: 	#002776;
 }
 .navbar{
     height: 10vh;
     width: 100%;
-    background-color: rgb(245, 220, 251);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.07);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +53,7 @@ h3{
     padding-right: 100px;
 }
 .nav a{
-    padding: 25px;
+    padding: 15px;
     text-decoration: none;
     font-size: xx-large;
     color: black;
@@ -48,7 +64,11 @@ h3{
 p a{
     font-size: xx-small;
     font-style: italic;
-    color: #011efe;
+    color: #0015b1;
+    cursor: pointer;
+}
+a:hover {
+    color: #ff0000;
 }
 label{
     font-size: larger;
@@ -57,9 +77,10 @@ label{
 input{
     width: 70%;
     height: 30px;
+    background-color: #a9b1b7;
+
 }
 input:hover{
-    /* box-shadow: 1px 1px 1px 1px lightblue; */
     -moz-box-shadow: 1px 1px 5px rgb(24, 144, 242);
     -webkit-box-shadow: 1px 1px rgb(24, 144, 242);
     box-shadow: 0 0 5px rgb(24, 144, 242);
@@ -72,6 +93,7 @@ textarea:hover{
 textarea{
     width: 70%;
     display: block;
+    background-color: #a9b1b7;
 }
 .btnarea{
     width: 70%;
@@ -97,5 +119,4 @@ button{
     height: 30px;
     width: 100%;
     background-color: rgb(15, 29, 29);
-    /* opacity: 80%; */
 }

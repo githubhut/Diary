@@ -4,13 +4,21 @@
     <h3>
         <%= hContent %>
     </h3>
-    <%post.forEach((e)=>{ %>
-        <h2> <%= e.title %></h2>
-        <p> 
-            <%= e.content.substring(0, 100) + "..." %>
-            <a href="/posts/<%= e.title %>">Read More</a>
-        </p>
-
-    <%}) %>
+    <div class="home_container">
+        <%post.forEach((e)=>{ %>
+            <div class="pst">
+                <h2> <%= e.title %></h2>
+             <p>
+                <% if (e.content.length > 10) { %>
+                    <%= e.content.substring(0, 10) + "..." %>
+                    <a href="/posts/<%= e.title %>">Read More</a>
+                <% } else { %>
+                    <%= e.content %>
+                <% } %>
+            </p>
+            </div>
+    
+        <%}) %>
+    </div>
 
 <%- include("partials/footer") %>
